@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: hirewave-backend
+    runtime: java
+    rootDir: backend
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/demo-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false

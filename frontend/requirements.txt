@@ -1,0 +1,47 @@
+============================================================
+Job Portal — Frontend System Requirements
+============================================================
+
+REQUIRED SOFTWARE
+-----------------
+Node.js 18+   https://nodejs.org  (includes npm)
+
+SETUP STEPS
+-----------
+1. Install Node.js from https://nodejs.org
+
+2. Install dependencies:
+      npm install
+
+3. Create a .env.local file in this directory with:
+      VITE_API_URL=http://localhost:8081/api
+   (Copy from .env.example)
+
+4. Start the development server:
+      npm run dev
+
+5. Frontend opens at http://localhost:5173
+
+BUILD FOR PRODUCTION
+--------------------
+      npm run build
+   Output is in the dist/ folder. Deploy that folder to
+   Vercel, Netlify, or any static host.
+
+NPM PACKAGES (managed automatically by package.json)
+-----------------------------------------------------
+react 19                    UI framework
+react-dom 19                DOM rendering
+react-router-dom 7          Client-side routing
+axios 1                     HTTP client
+tailwindcss 4               Utility-first CSS
+vite 8                      Build tool & dev server
+lucide-react                Icon library
+recharts 3                  Charts (employer analytics)
+@stomp/stompjs 7            WebSocket messaging (STOMP protocol)
+sockjs-client 1             WebSocket fallback transport
+@react-oauth/google 0.13    Google OAuth login button
+class-variance-authority    CSS class utilities
+tailwind-merge              Tailwind class merging
+
+NOTE: Run "npm install" once — it installs everything from package.json automatically.

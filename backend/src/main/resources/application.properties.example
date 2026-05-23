@@ -1,0 +1,38 @@
+# ============================================================
+# Job Portal Backend — Environment Variable Reference
+# ============================================================
+# These are the environment variables application.properties
+# reads from. Set them in:
+#   - Local dev:    IntelliJ Run Configuration > Environment Variables
+#   - Production:   Railway / Render / Heroku dashboard
+# ============================================================
+
+# PostgreSQL Database
+DB_URL=jdbc:postgresql://localhost:5432/jobportal
+DB_USERNAME=postgres
+DB_PASSWORD=your-database-password
+
+# JWT signing secret — must be at least 256 bits (64 hex chars)
+# Generate one: openssl rand -hex 32
+JWT_SECRET=replace-with-64-char-hex-string
+
+# Server port (set automatically by Railway; leave unset locally)
+# PORT=8081
+
+# Gmail SMTP — use a Gmail App Password (myaccount.google.com > Security > App Passwords)
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-16-char-app-password
+
+# Google OAuth 2.0 Client ID (console.cloud.google.com)
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+
+# Groq AI API key (console.groq.com)
+GROQ_API_KEY=gsk_your-groq-api-key-here
+
+# CORS — comma-separated list of allowed frontend URLs
+# Local dev default is http://localhost:5173
+# Production: set to your Vercel/Netlify URL, e.g. https://your-app.vercel.app
+CORS_ALLOWED_ORIGINS=https://your-frontend-domain.vercel.app
+
+# File upload directory (use cloud storage in production — local disk is ephemeral)
+# UPLOAD_DIR=uploads/resumes
